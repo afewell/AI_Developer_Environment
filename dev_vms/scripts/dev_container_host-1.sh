@@ -44,8 +44,9 @@ log "Installing 1-line apt packages..."
 sudo apt-get install -y "${simple_apt_installs[@]}"
 
 # Execute all module scripts for additional packages
+## All scripts should be idempotent
 
-# Run each module script directly since each script is already idempotent
+## Run each module script directly t
 declare -a install_scripts=(
     "install_docker.sh"
     "install_helm.sh"
